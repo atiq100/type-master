@@ -45,7 +45,7 @@ const typeController = (e) => {
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
-    display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : errorCount++}</span>`;
   }
 
   // check if given question text is equal to user typed text
@@ -84,12 +84,13 @@ const gameOver = () => {
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
+  console.log(errorCount)
 
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
   startTime = null;
-  errorCount = 0;
+  errorCount=0;
   userText = "";
   display.classList.add("inactive");
 };
@@ -135,5 +136,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);
