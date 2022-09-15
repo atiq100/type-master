@@ -34,21 +34,21 @@
                             <tbody>
                               <tr class="p-0">
                                 <th scope="row">1</th>
-                                <td>The storage capacity of local storage is 5MB/10MB</td>
-                                <td>The storage capacity of session storage is 5MB</td>
+                                <td>The storage capacity of local storage is 5MB/10MB.</td>
+                                <td>The storage capacity of session storage is 5MB.</td>
                                 
                               </tr>
                               <tr class="p-0">
                                 <th scope="row">2</th>
-                                <td>It can be updated and re-declared into the scope.</td>
-                                <td>It can be updated but cannot be re-declared into the scope.</td>
-                                <td>It cannot be updated or re-declared into the scope.</td>
+                                <td>As it is not session-based, it must be deleted via javascript or manually.</td>
+                                <td>It’s session-based and works per window or tab. This means that data is stored only for the duration of a session, i.e., until the browser (or tab) is closed</td>
+                                
                               </tr>
                               <tr class="p-0">
                                 <th scope="row">3</th>
-                                <td>It can be declared without initialization.</td>
-                                <td>It can be declared without initialization.</td>
-                                <td>It cannot be declared without initialization.</td>
+                                <td>There is no transfer of data to the server</td>
+                                <td>There is no transfer of data to the server</td>
+                                
                               </tr>
                             </tbody>
                           </table>
@@ -57,63 +57,41 @@
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                      Difference between arrow function and regular function
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Difference between Local storage and Session storage?.
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
                     <div class="accordion-body">
-                        <table class="table p-0 border-0">
+                        <table class="table  ">
                             <thead class="">
-                              <tr class="border-0 p-0">
+                              <tr class="p-0">
                                 <th scope="col">#</th>
-                                <th scope="col">Arrow function</th>
-                                <th scope="col">Regular function</th>
+                                <th scope="col">Global scope</th>
+                                <th scope="col">Block scope</th>
                                 
                               </tr>
                             </thead>
-                            <tbody class="p-0">
-                              <tr class="border-0 p-0">
-                                <th scope="row">this value</th>
-                                <td>Unlike regular functions, arrow functions do not have their own this.
-                                    </td>
-                                <td>Arguments objects are not available in arrow functions, but are available in regular functions.
-
-                                   </td>
+                            <tbody>
+                              <tr class="p-0">
+                                <th scope="row">1</th>
+                                <td>A variable declared at the top of a program or outside of a function is considered a global scope variable.</td>
+                                <td> Block Scoping means declaring a variable inside the block or curly brackets {} can not be accessed from outside the block.</td>
                                 
                               </tr>
-                              <tr class="boeder-0 p-0">
-                                <th scope="row">Constructors</th>
-                                <td>A consequence of this resolved lexically is that an arrow function cannot be used as a constructor.</td>
-                                <td>As seen in the previous section, the regular function can easily construct objects.
-
-                                    </td>
-                               
-                              </tr>
-                              <tr class="border-0 p-0">
-                                <th scope="row">arguments object</th>
-                                <td>On the other side, no arguments special keyword is defined inside an arrow function.
-
-                                    Again (same as with this value), the arguments object is resolved lexically: the arrow function accesses arguments from the outer function.</td>
-                                <td>Inside the body of a regular function, arguments is a special array-like object containing the list of arguments with which the function has been invoked.</td>
+                              <tr class="p-0">
+                                <th scope="row">2</th>
+                                <td>Variables declare with thr <strong>var,let and const</strong> are quite similar when declare inside a function</td>
+                                <td>Variables declare with thr <strong>var</strong> keyword can not have block scope</td>
                                 
                               </tr>
-                              <tr>
-                                <th scope="row">Implicit return</th>
-                                <td>You can return values from the arrow function the same way as from a regular function, but with one useful exception.
-
-                                    If the arrow function contains one expression, and you omit the function's curly braces, then the expression is implicitly returned. These are the inline arrows function.</td>
-                                <td>return expression statement returns the result from a function:
-                                    If the return statement is missing, or there's no expression after return statement, the regular function implicitely returns undefined:
-                                </td>
-                               
-                              </tr>
-                             
+                            
                             </tbody>
                           </table>
                     </div>
                   </div>
                 </div>
+                
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
